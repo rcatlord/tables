@@ -89,4 +89,4 @@ tbl <- df |>
     table.margin.left = px(5)
   )
 
-gtsave(tbl, "co2_emissions_per_capita_2022.png")
+gtsave(tbl, "emissions_per_capita.png")
