@@ -42,4 +42,5 @@ tbl <- films |>
     source_notes.padding = px(10)
   )
 
-gtsave(tbl, "tbl.png", expand = 10)
+tbl |> gtsave("index.html")
+tbl |> gtsave("tbl.png", expand = 10)
