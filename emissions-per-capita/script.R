@@ -4,7 +4,7 @@
 
 library(tidyverse) ; library(countrycode) ; library(gt)
 
-df <- read.csv("co-emissions-per-capita.csv") |> 
+df <- read.csv("data.csv") |> 
   filter(Year == max(Year)) |> 
   mutate(
     status = case_when(
@@ -89,4 +89,4 @@ tbl <- df |>
     table.margin.left = px(5)
   )
 
-gtsave(tbl, "emissions_per_capita.png")
+tbl |> gtsave("tbl.png", expand = 10)
