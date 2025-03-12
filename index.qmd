@@ -1,0 +1,31 @@
+---
+pagetitle: "Tables"
+format:
+   html: 
+    page-layout: article
+    self-contained: true
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r}
+library(tidyverse) ; library(pixture)
+
+paths <- c(
+  "emissions-per-capita/tbl.png",
+  "films/tbl.png",
+  "arab-league/tbl.png"
+)
+
+captions <- c(
+  "CO<sub>2</sub> emissions per capita",
+  "Almodóvar",
+  "League of Arab Nations"
+)
+```
+
+```{r}
+pixgallery(paths, caption = captions, caption_valign = "below")
+```
